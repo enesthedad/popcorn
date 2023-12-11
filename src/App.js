@@ -22,7 +22,7 @@ export default function App() {
       <Navbar movies={movies} />
       <StarRating />
       <StarRating basedOn='10' />
-
+      <StarRating fillColor='#212022' />
       <main className='main'>
         <Box
           movies={movies}
