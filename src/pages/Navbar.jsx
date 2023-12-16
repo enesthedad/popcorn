@@ -1,14 +1,13 @@
 import SearchBar from "./SearchBar";
-import { useState } from "react";
-const Navbar = ({ movies }) => {
-  const [query, setQuery] = useState("");
+import popCornIcon from "../popcorn.png";
+const Navbar = ({ movies, query, handleSearch }) => {
   return (
     <nav className='nav-bar'>
       <div className='logo'>
-        <span role='img'>🍿</span>
-        <h1>usePopcorn</h1>
+        <img src={popCornIcon} alt='' />
+        <h1>Grap Popcorn</h1>
       </div>
-      <SearchBar query={query} setQuery={setQuery} />
+      <SearchBar query={query} handleSearch={handleSearch} />
       <p className='num-results'>
         Found <strong>{movies.length}</strong> results
       </p>

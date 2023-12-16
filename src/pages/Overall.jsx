@@ -4,7 +4,6 @@ const Overall = ({ avgImdbRating, avgUserRating, avgRuntime }) => {
   return (
     <>
       <Rating emoji='⭐️' point={avgImdbRating} />
-
       <Rating emoji='🌟' point={avgUserRating} />
       <Rating emoji='⏳' point={avgRuntime}>
         min

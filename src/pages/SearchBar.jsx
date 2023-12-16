@@ -1,4 +1,4 @@
-const SearchBar = ({ query, setQuery }) => {
+const SearchBar = ({ query, handleSearch }) => {
   return (
     <>
       <input
@@ -6,7 +6,7 @@ const SearchBar = ({ query, setQuery }) => {
         type='text'
         placeholder='Search movies...'
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => handleSearch(e.target.value)}
       />
     </>
   );
