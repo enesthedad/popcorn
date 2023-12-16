@@ -43,6 +43,7 @@ const Box = ({
       />
     ) : (
       <div className='box'>
+        <h2 className='box-header'>WATCHED LIST</h2>
         <Button isThisOpen={isOpen2} handleOpen={setIsOpen2} />
         {isOpen2 && (
           <>
@@ -71,6 +72,7 @@ const Box = ({
     )
   ) : (
     <div className='box'>
+      <h2 className='box-header'>SEARCH MOVIES</h2>
       <Button isThisOpen={isOpen1} handleOpen={setIsOpen1} />
       {isOpen1 && (
         <ul className='list'>

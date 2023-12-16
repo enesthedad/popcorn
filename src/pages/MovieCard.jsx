@@ -12,13 +12,16 @@ const MovieCard = ({
     <li onClick={() => handleClick(movie.imdbID)}>
       <>
         <img src={movie.Poster} alt={`${movie.Title} poster`} />
-        <h3>{movie.Title}</h3>
-        <div>
-          <Rating emoji='⭐️' point={movie.imdbRating} />
 
-          <Rating emoji='🌟' point={movie.rate.toFixed(1)} />
+        <div className='movie-card-text'>
+          <h3>{movie.Title}</h3>
+          <div className='movie-card-rating'>
+            <Rating emoji='⭐️' point={movie.imdbRating} />
 
-          <Rating emoji='⏳' point={movie.Runtime} />
+            <Rating emoji='🌟' point={movie.rate.toFixed(1)} />
+
+            <Rating emoji='⏳' point={movie.Runtime} />
+          </div>
         </div>
       </>
     </li>
@@ -29,8 +32,9 @@ const MovieCard = ({
       key={movie.imdbID}
     >
       <img src={movie.Poster} alt={`${movie.Title} poster`} />
-      <h3>{movie.Title}</h3>
-      <div>
+
+      <div className='movie-card-text'>
+        <h3>{movie.Title}</h3>
         <p>
           <span>🗓</span>
           <span>{movie.Year}</span>
