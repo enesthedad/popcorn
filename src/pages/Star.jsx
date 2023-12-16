@@ -5,11 +5,8 @@ const Star = ({
   onHoverOut,
   fillColor,
   strokeColor,
-  size,
 }) => {
   const starStyle = {
-    width: `${size}`,
-    height: `${size}`,
     display: "block",
     cursor: "pointer",
   };

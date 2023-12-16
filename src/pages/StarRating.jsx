@@ -1,10 +1,8 @@
-import { useState } from "react";
 import Star from "./Star";
 const StarRating = ({
   basedOn = 5,
   fillColor = "#FDD835",
   strokeColor = "#FDD835",
-  size = "16px",
   rate = "5",
   tempRate,
   onRate,
@@ -19,7 +17,6 @@ const StarRating = ({
           <Star
             fillColor={fillColor}
             strokeColor={strokeColor}
-            size={size}
             onHoverIn={() => handleHoverIn(i + 1)}
             onHoverOut={() => handleHoverOut()}
             full={
