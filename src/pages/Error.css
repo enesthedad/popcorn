@@ -1,0 +1,78 @@
+:root {
+  --color-red: #f86;
+  --circle-size: 60px;
+}
+
+.circle,
+.circle-border {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+}
+
+.circle {
+  z-index: 1;
+  position: relative;
+  background: transparent;
+  transform: scale(1);
+  animation: success-anim 700ms ease;
+}
+
+.circle-border {
+  z-index: 0;
+  position: absolute;
+  transform: scale(1.1);
+  animation: circle-anim 400ms ease;
+  background: transparent;
+  border: 3px solid var(--color-red);
+}
+.error-message {
+  margin-top: 20px;
+  color: var(--color-red);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@keyframes success-anim {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-anim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.error::before,
+.error::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: var(--color-red);
+  position: absolute;
+}
+
+.error::before {
+  width: 40px;
+  top: 48%;
+  left: 16%;
+  transform: rotateZ(50deg);
+}
+
+.error::after {
+  width: 40px;
+  top: 48%;
+  left: 16%;
+  transform: rotateZ(-50deg);
+}
